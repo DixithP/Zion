@@ -8,7 +8,7 @@ if(ENVIRONMENT == 'production')
 	$db['default']['hostname'] = 'localhost';
 	$db['default']['username'] = 'root';
 	$db['default']['password'] = 'root';
-	$db['default']['database'] = 'library';
+	$db['default']['database'] = '';
 }
 else
 {
