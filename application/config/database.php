@@ -5,17 +5,17 @@ $active_record = TRUE;
 
 if(ENVIRONMENT == 'production')
 {
-	$db['default']['hostname'] = 'localhost';
-	$db['default']['username'] = 'root';
-	$db['default']['password'] = 'root';
-	$db['default']['database'] = '';
+	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
+	$db['default']['username'] = 'bf1eb1838914dd';
+	$db['default']['password'] = '36feaf51';
+	$db['default']['database'] = 'mydbfirst';
 }
 else
 {
-	$db['default']['hostname'] = 'localhost';
-	$db['default']['username'] = 'root';
-	$db['default']['password'] = 'root';
-	$db['default']['database'] = 'library';
+	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
+	$db['default']['username'] = 'bf1eb1838914dd';
+	$db['default']['password'] = '36feaf51';
+	$db['default']['database'] = 'mydbfirst';
 }
 
 $db['default']['dbdriver'] = 'mysql';
