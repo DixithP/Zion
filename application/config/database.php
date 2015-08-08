@@ -5,6 +5,7 @@ $active_record = TRUE;
 
 if(ENVIRONMENT == 'production')
 {
+<<<<<<< HEAD
 	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
 	$db['default']['username'] = 'bf1eb1838914dd';
 	$db['default']['password'] = '36feaf51';
@@ -16,6 +17,19 @@ else
 	$db['default']['username'] = 'bf1eb1838914dd';
 	$db['default']['password'] = '36feaf51';
 	$db['default']['database'] = 'library';
+=======
+	$db['default']['hostname'] = '';
+	$db['default']['username'] = '';
+	$db['default']['password'] = '';
+	$db['default']['database'] = '';
+}
+else
+{
+	$db['default']['hostname'] = '';
+	$db['default']['username'] = '';
+	$db['default']['password'] = '';
+	$db['default']['database'] = '';
+>>>>>>> 1638b41e40d04e14081f54cb8780c6a330d493c9
 }
 
 $db['default']['dbdriver'] = 'mysql';
