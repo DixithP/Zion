@@ -28,9 +28,9 @@
       	</div> 	
 
       	<div id="logbox">
-      		<form class="form-signin" action="register" method="post">
+      		<form class="form-signin" action="/register" method="post">
 	     	   <h2 class="form-signin-heading">Sign Up</h2>
-	     	   		<div class="errors" ><?= $this->session->flashdata('registration_errors') ;?></div>
+	     	   		<div class="errors" ><?= $this->session->flashdata('registration_errors') ?></div>
 		        <label for="inputName" class="sr-only">Name</label>
 		        <input type="text" name='name' class="form-control" placeholder="Name" required autofocus>
 

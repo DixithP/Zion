@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Users Review</title>
+	<title>User Profile</title>
 			<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 

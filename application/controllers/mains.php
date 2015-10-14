@@ -48,12 +48,12 @@ class Mains extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			validation_errors();
-			$this->session->set_flashdata('registration_errors',validation_errors());
+
+			$this->session->set_flashdata('registration_errors', validation_errors());
 			// 	var_dump(validation_errors());
 			// die();
-
-			redirect('mains/reg');
+			$this->load->view('register');
+			// redirect('/mains/reg');
 		}
 		else
 		{
@@ -62,7 +62,7 @@ class Mains extends CI_Controller {
 			if($result)
 			{
 				$this->session->set_flashdata('registration_errors','Successfully Registered');
-				redirect('mains/reg');
+				redirect('/mains/reg');
 			}
 		}
 		
