@@ -29,6 +29,12 @@
 		<div id="main">
 			<h4>Recent Book Reviews:</h4><hr>
 				<?php 
+					if($books == NULL){ ?>
+					<p>No Books reviewed yet</p>
+
+				<?php }?>
+					<?php
+
 				 foreach ($books as $book) { ?>				
 					<p>Book   : <a href="/mains/book_review/<?= $book['book_Id']?>"<h2> <?= $book['title'] ?></h2></a><br></p>
 					<p>Author :<?= $book['author']?></p>
