@@ -5,13 +5,23 @@ class Mains extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		 $this->output->enable_profiler();
+		 // $this->output->enable_profiler();
 	}
 
 	public function index()
 	{
 		// echo "Welcome to CodeIgniter. The default Controller is Main.php";
 		$this->load->view('login');
+	}
+
+	//Search Book
+
+	public function search_a_Book(){
+		
+		$search=  $this->input->post('search');
+		$this->load->model('book');
+		$result = $this->book->searchBook($search);
+		echo json_encode ($result);
 	}
 
 	public function reg()
@@ -36,11 +46,14 @@ class Mains extends CI_Controller {
 		$this->form_validation->set_rules('cnfpwd','Password Confirmation','required');
 		
 
-		if($this->form_validation->run()== FALSE)
+		if ($this->form_validation->run() == FALSE)
 		{
 			validation_errors();
 			$this->session->set_flashdata('registration_errors',validation_errors());
-			redirect('/');
+			// 	var_dump(validation_errors());
+			// die();
+
+			redirect('mains/reg');
 		}
 		else
 		{
@@ -49,11 +62,10 @@ class Mains extends CI_Controller {
 			if($result)
 			{
 				$this->session->set_flashdata('registration_errors','Successfully Registered');
-				redirect('/');
+				redirect('mains/reg');
 			}
 		}
-		redirect('/');
-
+		
 	}
 
 	public function login()
@@ -75,9 +87,7 @@ class Mains extends CI_Controller {
 		else
 		{
 			$this->load->model('book');
-			$result=$this->book->login_user($data);
-			// var_dump($result['id']);
-			// die();
+			$result=$this->book->login_user($data);		
 			$this->session->set_userdata('currentuserid',$result['Id']);
 			$currentuserid=$this->session->userdata('currentuserid');
 			$this->session->set_userdata('username',$result['name']);
@@ -101,6 +111,11 @@ class Mains extends CI_Controller {
 		}
 	}
 
+	public function booksearch()
+	{
+		// echo "Welcome to CodeIgniter. The default Controller is Main.php";
+		$this->load->view('searchbook');
+	}
 	public function addbook()
 	{	
 
@@ -112,8 +127,8 @@ class Mains extends CI_Controller {
 		$data['rating']=$this->input->post('rating');
 		$data['userid'] = $this->session->userdata('currentuserid');
 
-		var_dump($data);
-				die();
+		// var_dump($data);
+		// 		die();
 
 		if($this->input->post('newauthor'))
 			{  
@@ -176,13 +191,14 @@ class Mains extends CI_Controller {
 		
 	}
 
-	public function deletereview($reviewid,$userid,$bookid)//single book review
+	public function deletereview($reviewid,$bookid)//single book review
 	{
 		$this->load->model('book');
-		$result=$this->book->delete_book_review($reviewid,$userid,$bookid);		
+		$this->book->delete_book_review($reviewid);	
+
 		// var_dump($result);
 		// die();
-		$this->load->view('addreview',array('result' => $result));
+		$this->book_review($bookid);
 
 	}
 

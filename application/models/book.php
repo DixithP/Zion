@@ -16,6 +16,19 @@ class book extends CI_Model
  		$values=array($data['em'],$data['pd']);
  		return $this->db->query($query,$values)->row_array();
  	}
+ 	// Search BOOK
+ 	function searchBook($search){
+ 		$query="SELECT Id,title FROM books where title LIKE ?";
+ 		$values= "%".$search."%";
+ 		return $this->db->query($query,$values)->result_array();
+
+		// $this->db->select("Id,title");
+		// $whereCondition = array('title' =>$search);
+		// $this->db->where($whereCondition);
+		// $this->db->from('books');
+		// $query = $this->db->get();
+		// return $query->result();
+	}
 
  	
  	public function add_author($data)
@@ -23,9 +36,16 @@ class book extends CI_Model
  		$query="INSERT INTO authors (author,created_at,updated_at)
  				VALUES (?,NOW(),NOW())";
  		$values=array($data['newauthor']);
- 		return $this->db->query($query,$values);
+ 		$this->db->query($query,$values);
  		$authorid = $this->db->insert_id();
  		return $authorid;
+ 	}
+
+ 	public function delete_book_review($reviewid)
+ 	{
+ 		$query="DELETE from reviews where  Id =?";
+ 		$values=$reviewid;
+ 		return $this->db->query($query,$values);
  	}
 
  	public function add_book($data)
@@ -87,8 +107,8 @@ class book extends CI_Model
 
  	public function add_reviews($data, $bookid)
  	{	
- 		var_dump($data);
-				die();
+ 		// var_dump($data);
+			// 	die();
 
  		$query="INSERT INTO reviews (review,created_at,updated_at,book_id,user_id)
  				VALUES (?,NOW(),NOW(),?,?)";
