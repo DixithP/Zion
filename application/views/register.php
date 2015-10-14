@@ -53,9 +53,7 @@
 
 	          <p class="login"> <a href="/mains">Log In</a></p>
 
-       	</div>
-
-           
+       	</div>           
 
     </div> <!-- /container -->	
 

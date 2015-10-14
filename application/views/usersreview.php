@@ -16,6 +16,7 @@
 	<div class="container-fluid">
 		<div id="bar">
 			<img src="../../assets/images/logo.png">
+		
 			<div id="head-right">
 					<p class="welcome">Welcome <?= $this->session->userdata('username') ?> !</p>
 				<ul class="links">
@@ -24,30 +25,26 @@
 					<li><a href="/mains/add_new_book">Add Book and  Review</a></li>
 					<li><a href="/mains/logout"> Logout</a></li>
 				<ul>
-			</div>
-			
+			</div>	
 		</div>
 	
 	
-	<div id="main">
-		
-		<?php foreach ($result1 as $row) { ?>	
-		 <h3>Booklover <?=$row['alias'] ?>'s Profile</h3><hr>
-			<p>Name : <?=$row['name'] ?></p>
-			<p>Alias : <?=$row['alias'] ?> </p>
-			<p>Email : <?=$row['email'] ?></p>
-			<p>Total Reviews : <?=$row['reviews'] ?></p>
-		<?php } ?>
-	</div>	
+		<div id="main">		
+			<?php foreach ($result1 as $row) { ?>	
+			 <h3>Booklover <?=$row['alias'] ?>'s Profile</h3><hr>
+				<p>Name : <?=$row['name'] ?></p>
+				<p>Alias : <?=$row['alias'] ?> </p>
+				<p>Email : <?=$row['email'] ?></p>
+				<p>Total Reviews : <?=$row['reviews'] ?></p>
+			<?php } ?>
+		</div>	
 
-	<div id="main-right">
-		<h3>Posted reviews on following books</h3><hr>
-		<?php foreach ($result2 as $row) { ?>
-
-			<p><a href="/mains/book_review/<?=$row['id'] ?>"> <?=$row['title'] ?></a><p>
-	
-		<?php } ?>
-	</div>		
+		<div id="main-right">
+			<h3>Posted reviews on following books</h3><hr>
+			<?php foreach ($result2 as $row) { ?>
+				<p><a href="/mains/book_review/<?=$row['id'] ?>"> <?=$row['title'] ?></a><p>	
+			<?php } ?>	
+		</div>
 	</div>
 </body>
 </html>

@@ -22,8 +22,7 @@
 <body>
 	<div class="container-fluid">
 		<div id="bar">
-
-<img src="../assets/images/logo.png">
+			<img src="../assets/images/logo.png">
 			<div id="head-right">			
 				<p class="welcome">Welcome <?= $this->session->userdata('username') ?> !</p>
 				<ul class="links">
@@ -32,21 +31,14 @@
 					<li><a href="/mains/logout"> Logout</a></li>
 				<ul>	
 			</div>				
-		</div>
-
-			
-	
+		</div>	
 	
 		<div id="main">		
 			<div id="searchBook">
 				<h4>Search a Book : <input type="text" class="form-signin" name="search" id="search" /></h4><hr>
-			<div id="finalResult"></div>
+				<div id="finalResult"></div>
+			</div>	
 		</div>
-		
 	</div>
-
-	</div>
-
-
 </body>
 </html>

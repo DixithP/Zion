@@ -27,43 +27,37 @@
 				</div>
 			</div>
 		<div id="main">
-					<h4>Recent Book Reviews:</h4>
-					<hr>
-
-				    <?php 
-				 foreach ($books as $book) { ?> 	
-				
-				<p>Book   : <a href="/mains/book_review/<?= $book['book_Id']?>"<h2> <?= $book['title'] ?></h2></a><br></p>
-				<p>Author :<?= $book['author']?></p>
-				<p>Rating :
-				<?php
-			    for($x=1;$x<= 5;$x++) {       
-			   		if($x<= $book['rating']){
-			       	 echo '<img src="/assets/images/stars/starsharp.png" />';
-			  		}
-			  		else{
-			  			echo '<img src="/assets/images/stars/emptystar.png" />';
-			  		}
+			<h4>Recent Book Reviews:</h4><hr>
+				<?php 
+				 foreach ($books as $book) { ?>				
+					<p>Book   : <a href="/mains/book_review/<?= $book['book_Id']?>"<h2> <?= $book['title'] ?></h2></a><br></p>
+					<p>Author :<?= $book['author']?></p>
+					<p>Rating :
+					<?php
+			    		for($x=1;$x<= 5;$x++) {       
+			   				if($x<= $book['rating']){
+			       			 echo '<img src="/assets/images/stars/starsharp.png" />';
+			  				}
+			  				else{
+			  					echo '<img src="/assets/images/stars/emptystar.png" />';
+			  				}
 			        
-			    }
-				?></p>
+			    		}
+					?></p>
 				
 					<p>Reviews :</p>
 					<div id="reviews">
-				   <?php 
-					 foreach ($reviews as $review) { 
-					 	if($book['book_Id'] == $review['book_Id']) {?> 
-						<p> <a href="/mains/user/<?= $review['id']?>"><?= $review['name'] ?></a> says : <?= $review['review'] ?> on <? $datedislay= strtotime($review['created_at']) ?> <?= date("j F Y",$datedislay ); ?></p>
+				  		 <?php 
+					 		foreach ($reviews as $review) { 
+					 			if($book['book_Id'] == $review['book_Id']) {?> 
+								<p> <a href="/mains/user/<?= $review['id']?>"><?= $review['name'] ?></a> says : <?= $review['review'] ?> on <? $datedislay= strtotime($review['created_at']) ?> <?= date("j F Y",$datedislay ); ?></p>
 								
-					<?php }  ?>
+								<?php }  ?>
 				
-			<?php }  ?>
-			<hr>
-			</div>
-
-			
-		<?php }  ?>
-			
+							<?php }  ?>
+							<hr>
+					</div>	
+					<?php }  ?>	
 				
 		</div>
 		<div id="main-right">
@@ -77,7 +71,6 @@
 				<?php }  ?>
 		</div>
 
-</div>
-
+	</div>
 </body>
 </html>

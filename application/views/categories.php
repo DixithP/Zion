@@ -22,6 +22,7 @@
 	<div class="container-fluid">
 		<div id="bar">
 			<img src="../assets/images/logo.png">
+			
 			<div id="head-right">			
 				<p class="welcome">Welcome <?= $this->session->userdata('username') ?> !</p>
 				<ul class="links">
@@ -29,23 +30,15 @@
 					<li><a href="/mains/add_new_book">Add Book and  Review</a></li>
 					<li><a href="/mains/logout"> Logout</a></li>
 				<ul>	
-			</div>				
-		</div>
-
-			
-	
-	
-		<div id="main">		
-				
-			<h3>  CATEGORIES</h3><hr>			
-			
+			</div>	
+		</div>			
+		
+		<div id="main">					
+			<h3>  CATEGORIES</h3><hr>				
 				<?php 			
-					 foreach ($result as $row) { 			 			
-					?>				
-						<li><a href="/mains/show_books_reviews/<?= $row['Id'] ?>"?>	<?= $row['category'] ?> </a></li>
-				
-				<?php }?> 			
-				
+					 foreach ($result as $row) { ?>										
+						<li><a href="/mains/show_books_reviews/<?= $row['Id'] ?>">	<?= $row['category'] ?> </a></li>				
+				<?php }?> 							
 		</div>
 	</div>
 </body>

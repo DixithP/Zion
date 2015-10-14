@@ -18,6 +18,7 @@
 	<div class="container-fluid">
 		<div id="bar">
 			<img class="logo" src="../../../assets/images/logo.png">
+		
 			<div id="head-right">
 					<p class="welcome">Welcome <?= $this->session->userdata('username') ?> !</p>
 				<ul>
@@ -27,8 +28,8 @@
 					<li><a href="/mains/logout"> Logout</a></li>
 				<ul>
 			</div>
-	</div>
-			
+		</div>
+					
 		<div id="main">
 			<h3>Book : <?= $result[0]['title'] ?></h3>
 			<h3>Author : <?= $result[0]['author'] ?></h3>
@@ -41,13 +42,8 @@
 			  		else{
 			  			echo '<img src="../../../assets/images/stars/emptystar.png" />';
 			  		}
-			        
-			    }
-				    // var_dump($result);
-				    // die();
-			?>
-			`</h3>
-			
+			    }				   
+			?></h3>			
 			<hr>
 
 			<h3>Reviews :</h3>
@@ -62,16 +58,15 @@
 				<?php } ?>
 			<?php } ?>
 		</div>
-			<div id="main-right">
-				<form action="/mains/add_review_only/<?= $result[0]['book_id']?>/<?=$this->session->userdata('currentuserid')?>" method="post">
-					<h2>Add a Review</h2>
-					<div class="form-group">
-	   					<label for="review"></label>
-	    				<textarea class="form-control" name='review' placeholder="Review" required></textarea>	
-  					</div>				
+		<div id="main-right">
+			<form action="/mains/add_review_only/<?= $result[0]['book_id']?>/<?=$this->session->userdata('currentuserid')?>" method="post">
+				<h2>Add a Review</h2>
+				<div class="form-group">
+	   				<label for="review"></label>
+	    			<textarea class="form-control" name='review' placeholder="Review" required></textarea>	
+  				</div>				
 				<button class="btn btn-lg btn-success center-block" type="submit">Add Review</button>
-				</form>
-
+			</form>
 		</div>	
 	</div>
 </body>

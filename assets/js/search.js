@@ -3,14 +3,14 @@
 	$(document).ready(function(){
 	  $("#search").keyup(function(){
 		if($("#search").val().length>2){
-			console.log($("#search").val());
+			// console.log($("#search").val());
 		$.ajax({
 			type: "post",
 			url: "../../mains/search_a_Book",
 			cache: false,				
 			data:'search='+$("#search").val(),
 			success: function(response){
-				console.log(response);
+				// console.log(response);
 				$('#finalResult').html("");
 				var obj = JSON.parse(response); 
 				console.log(obj);
