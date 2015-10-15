@@ -12,13 +12,13 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../assets/css/login.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/login.css">
 	
 </head>
 <body>
 	<div class="container-fluid">	
 	 	<div id="bar">	 	
- 			<img src="../assets/images/logo.png">
+ 			<img src="./assets/images/logo.png">
 
 	 	</div>
 	 	
