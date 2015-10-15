@@ -7,16 +7,16 @@ if(ENVIRONMENT == 'production')
 {
 
 	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
-	$db['default']['username'] = 'b034b7fc401ecf';
-	$db['default']['password'] = '3dadf12c';
-	$db['default']['database'] = 'bookloverzion';
+	$db['default']['username'] = 'b7fe759e067bc4';
+	$db['default']['password'] = '43d39743';
+	$db['default']['database'] = '';
 }
 else
 {
 	$db['default']['hostname'] = 'us-cdbr-azure-west-c.cloudapp.net';
-	$db['default']['username'] = 'b034b7fc401ecf';
-	$db['default']['password'] = '3dadf12c';
-	$db['default']['database'] = 'bookloverszion';
+	$db['default']['username'] = 'b7fe759e067bc4';
+	$db['default']['password'] = '43d39743';
+	$db['default']['database'] = '';
 
 }
 
