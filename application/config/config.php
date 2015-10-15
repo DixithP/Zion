@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-$config['base_url']	= 'http://zion.azurewebsites.net/';
+$config['base_url']	= '';
 
 $config['index_page'] = '';
 
