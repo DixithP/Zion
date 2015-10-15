@@ -26,7 +26,8 @@ class Mains extends CI_Controller {
 
 	public function reg()
 	{
-		// echo "Welcome to CodeIgniter. The default Controller is Main.php";
+		echo "Welcome to CodeIgniter. The default Controller is Main.php";
+		die('here');
 		$this->load->view('register');
 	}
 
