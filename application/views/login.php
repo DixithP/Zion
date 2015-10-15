@@ -28,7 +28,7 @@
       	</div> 	
 
       	<div id="logbox">
-      		<form class="form-signin" action="login" method="post">
+      		<form class="form-signin" action="/login" method="post">
            	
 	        	<p class="form-signin-heading">Log In</p>
 	        	<div class="errors" ><?= $this->session->flashdata('login_errors') ;?></div>
@@ -40,7 +40,7 @@
 
        		 </form>
 
-       		 <p class="register"> <a href="mains/reg">Sign Up</a></p>
+       		 <p class="register"> <a href="/reg">Sign Up</a></p>
 
        	</div>
 
