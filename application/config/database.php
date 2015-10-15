@@ -21,46 +21,46 @@ else
 }*/
 
 
-// if(ENVIRONMENT == 'production')
-// {
-
-// 	$db['default']['hostname'] = 'us-cdbr-iron-east-03.cleardb.net';
-// 	$db['default']['username'] = 'bd7bba72dc1b56';
-// 	$db['default']['password'] = '32df5d74';
-// 	$db['default']['database'] = 'heroku_eaed7eee8f00c7d';
-// }
-// else
-// {
-// 	$db['default']['hostname'] = 'us-cdbr-iron-east-03.cleardb.net';
-// 	$db['default']['username'] = 'bd7bba72dc1b56';
-// 	$db['default']['password'] = '32df5d74';
-// 	$db['default']['database'] = 'heroku_eaed7eee8f00c7d';
-
-// }
-
 if(ENVIRONMENT == 'production')
 {
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-$server = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$db = substr($url["path"], 1);
-
-$conn = new mysqli($server, $username, $password, $db);
+	$db['default']['hostname'] = '10.184.104.87:47141';
+	$db['default']['username'] = 'bd7bba72dc1b56';
+	$db['default']['password'] = '32df5d74';
+	$db['default']['database'] = 'heroku_eaed7eee8f00c7d';
 }
 else
 {
-	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+	$db['default']['hostname'] = '10.184.104.87:47141';
+	$db['default']['username'] = 'bd7bba72dc1b56';
+	$db['default']['password'] = '32df5d74';
+	$db['default']['database'] = 'heroku_eaed7eee8f00c7d';
 
-$server = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$db = substr($url["path"], 1);
+}
 
-$conn = new mysqli($server, $username, $password, $db);
-}
-}
+// if(ENVIRONMENT == 'production')
+// {
+// $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+// $server = $url["host"];
+// $username = $url["user"];
+// $password = $url["pass"];
+// $db = substr($url["path"], 1);
+
+// $conn = new mysqli($server, $username, $password, $db);
+// }
+// else
+// {
+// 	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+// $server = $url["host"];
+// $username = $url["user"];
+// $password = $url["pass"];
+// $db = substr($url["path"], 1);
+
+// $conn = new mysqli($server, $username, $password, $db);
+// }
+// }
 
 
 
