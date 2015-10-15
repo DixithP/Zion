@@ -24,7 +24,7 @@
 	 	
 		<div id="quote">
       		<p class="say">You know you have read a good book when you turn the last page and feel a little as if you have lost a friend.</p>
-			<p class="author">–Paul Sweeney</p>
+			<p class="author"> Paul Sweeney</p>
       	</div> 	
 
       	<div id="logbox">
