@@ -62,7 +62,7 @@ class Mains extends CI_Controller {
 			if($result)
 			{
 				$this->session->set_flashdata('registration_errors','Successfully Registered');
-				redirect('/mains/reg');
+				$this->load->view('login');
 			}
 		}
 		
