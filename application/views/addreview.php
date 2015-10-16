@@ -63,7 +63,7 @@
 				<h2>Add a Review</h2>
 				<div class="form-group">
 	   				<label for="review"></label>
-	    			<textarea class="form-control" name='review' placeholder="Review" required></textarea>	
+	    			<textarea class="form-control" name='review' placeholder="Review" required maxlength="100"></textarea>	
   				</div>				
 				<button class="btn btn-lg btn-success center-block" type="submit">Add Review</button>
 			</form>
