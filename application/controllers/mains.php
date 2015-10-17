@@ -52,8 +52,8 @@ class Mains extends CI_Controller {
 			$this->session->set_flashdata('registration_errors', validation_errors());
 			// 	var_dump(validation_errors());
 			// die();
-			$this->load->view('register');
-			// redirect('/mains/reg');
+			// $this->load->view('register');
+			 redirect('/mains/reg');
 		}
 		else
 		{
@@ -61,8 +61,8 @@ class Mains extends CI_Controller {
 			$result=$this->book->register_user($data);
 			if($result)
 			{
-				$this->session->set_flashdata('registration_errors','Successfully Registered');
-				$this->load->view('login');
+				$this->session->set_flashdata('login_errors','Successfully Registered');
+				redirect('/');
 			}
 		}
 		
