@@ -51,7 +51,7 @@
 				if	($row['review'] == NULL) { ?>
 					<p> No reviews available</p>
 				<?php } else { ?>
-				<p> <a href="/mains/user/<?= $row['user_id']?>"><?= $row['name'] ?></a> says : <?= $row['review'] ?> on <? $datedislay= strtotime($row['created_at']) ?> <?= date("j F Y",$datedislay ); ?>
+				<p> <a href="/mains/user/<?= $row['user_id']?>"><?= $row['name'] ?></a> says : <?= $row['review'] ?> <span>on <? $datedislay= strtotime($row['created_at']) ?> <?= date("j F Y",$datedislay ); ?></span>
 				<?php if($row['user_id'] == $this->session->userdata('currentuserid')){ ?>
 					<a class="delete" href="/mains/deletereview/<?= $row['id']?>/<?= $result[0]['book_id']?>"> Delete this review</a></p>
 					<?php } ?>
