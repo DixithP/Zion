@@ -56,7 +56,7 @@
 				  		 <?php 
 					 		foreach ($reviews as $review) { 
 					 			if($book['book_Id'] == $review['book_Id']) {?> 
-								<p> <a href="/mains/user/<?= $review['id']?>"><?= $review['name'] ?></a> says : <?= $review['review'] ?> on <? $datedislay= strtotime($review['created_at']) ?> <?= date("j F Y",$datedislay ); ?></p>
+								<p> <a href="/mains/user/<?= $review['id']?>"><?= $review['name'] ?></a> says : <?= $review['review'] ?> on <span><? $datedislay= strtotime($review['created_at']) ?> <?= date("j F Y",$datedislay ); ?><span></p>
 								
 								<?php }  ?>
 				
