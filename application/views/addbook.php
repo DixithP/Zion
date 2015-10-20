@@ -72,7 +72,7 @@
 							</li>		  		
 		  		  		 	<li>		
 		  		  		 		<label for="review"  class="title">Review:</label>
-		    					<textarea type="text"class="form-control" name='review' required></textarea>	<br>
+		    					<textarea type="text"class="form-control" name='review' required maxlength="100"></textarea>	<br>
 		  					</li>  	  		
 
 		  					<button class="btn btn-lg btn-success center-block" type="submit">Add Book </button>
